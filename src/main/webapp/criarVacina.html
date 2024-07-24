@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Incluir vacina</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Incluir vacina</h2>
+    <form action="vacina" method="post">
+
+        <input type="hidden" name="acao" value="incluir"/>
+
+        <div class="mb-3">
+            <label for="vacinaTitulo" class="form-label">Título da vacina:</label>
+            <input type="text" class="form-control" name="vacinaTitulo" id="vacinaTitulo" size="60" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="vacinaDescricao" class="form-label">Descrição da vacina:</label>
+            <input type="text" class="form-control" name="vacinaDescricao" id="vacinaDescricao" size="200" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="vacinaDose" class="form-label">Doses:</label>
+            <input type="number" class="form-control" name="vacinaDose" id="vacinaDose" min="0" max="999999" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="vacinaPeriodicidade" class="form-label">Periodicidade (0 - dia, 1 - semana, 2 - mês, 3 - ano):</label>
+            <input type="number" class="form-control" name="vacinaPeriodicidade" id="vacinaPeriodicidade" min="0" max="3" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="vacinaIntervalo" class="form-label">Intervalo:</label>
+            <input type="number" class="form-control" name="vacinaIntervalo" id="vacinaIntervalo" min="0" max="999999" required>
+        </div>
+
+        <div class="mb-3">
+            <input type="submit" class="btn btn-primary" value="Gravar">
+        </div>
+
+    </form>
+</div>
+</body>
+</html>
